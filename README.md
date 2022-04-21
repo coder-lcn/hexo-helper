@@ -10,5 +10,9 @@
 ## 使用
 
 ```shell
+npm install hexo-helper -g
+```
+
+```shell
 h hello world
 ```

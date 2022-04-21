@@ -7,8 +7,9 @@
     "h": "./lib/main.js"
   },
   "scripts": {
-    "test": "cd test && yarn test",
-    "build": "tsc"
+    "test": "cd test && pnpm test",
+    "build": "tsc",
+    "prepublish": "pnpm build"
   },
   "author": "",
   "license": "ISC",
