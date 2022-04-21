@@ -1,0 +1,24 @@
+{
+  "name": "hexo-helper",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "h": "./lib/main.js"
+  },
+  "scripts": {
+    "test": "cd test && yarn test",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.25"
+  },
+  "dependencies": {
+    "@types/inquirer": "^8.2.1",
+    "dayjs": "^1.11.1",
+    "inquirer": "^8.2.2",
+    "lowdb": "github:dankreiger/lowdb#chore/esm-cjs-hybrid-WITH-LIB"
+  }
+}
