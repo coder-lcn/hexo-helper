@@ -9,7 +9,7 @@ import { join } from "path";
 import { Category, Props, Tag } from "./types";
 import inquirer from "inquirer";
 import dayjs from "dayjs";
-import { readdir, writeFile } from "fs/promises";
+import { writeFile } from "fs/promises";
 
 async function getCategory(category: Category[]) {
   const categoryList: string[] = [];
@@ -81,9 +81,7 @@ tags: ${tag}
 
   try {
     const posts = join(process.cwd(), "source/_posts");
-    const dir = await readdir(posts);
-    const index = dir.length + 1;
-    const fileName = index + "_" + title.replace(" ", "-") + ".md";
+    const fileName = title.replace(" ", "-") + ".md";
 
     await writeFile(join(posts, fileName), template);
     console.log("创建新文章：" + title);
